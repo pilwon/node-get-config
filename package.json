@@ -1,0 +1,41 @@
+{
+  "name": "get-config",
+  "version": "0.1.0",
+  "description": "Automagically builds a config object used throughout an application.",
+  "license": "MIT",
+  "author": {
+    "name": "Pilwon Huh",
+    "email": "pilwon@gmail.com"
+  },
+  "homepage": "https://github.com/pilwon/node-get-config",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pilwon/node-get-config.git"
+  },
+  "keywords": [
+    "config",
+    "configuration",
+    "load",
+    "json",
+    "yaml",
+    "yml",
+    "env",
+    "environment",
+    "envvar",
+    "nodeenv",
+    "node_env",
+    "dev",
+    "development",
+    "prod",
+    "production"
+  ],
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "get-env": "^0.3.2",
+    "js-yaml": "^3.2.3",
+    "lodash": "^2.4.1"
+  },
+  "scripts": {
+    "prepublish": "npm prune"
+  }
+}

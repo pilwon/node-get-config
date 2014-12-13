@@ -10,5 +10,6 @@ getConfig(__dirname + '/config', function (err, config) {
   //   config.client.hello ==> 'dude' for dev, 'world' otherwise
   //   config.server.host  ==> 'prod-server' for prod, 'localhost' otherwise
   //   config.server.port  ==> 12345 for all environments
+  //   config.test.foo     ==> 'bar' only for dev
   console.log(config);
 });

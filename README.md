@@ -84,14 +84,16 @@ require('get-config')(__dirname + '/config')
 
 ## Credits
 
+See the [contributors](https://github.com/pilwon/node-get-config/graphs/contributors).
+
+Special thanks to:
+
 * [get-env](https://github.com/pilwon/node-get-env): `NODE_ENV` parser
 * [ini](https://github.com/isaacs/ini): INI parser
 * [ini](https://github.com/isaacs/ini): INI parser
 * [js-yaml](https://github.com/nodeca/js-yaml): YAML parser
 * [toml](https://github.com/BinaryMuse/toml-node): TOML parser
 * [xml2json](https://github.com/buglabs/node-xml2json): XML parser
-
-  See the [contributors](https://github.com/pilwon/node-get-config/graphs/contributors).
 
 
 ## License

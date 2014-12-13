@@ -5,7 +5,8 @@
 
 `get-config` is a [Node.js](http://nodejs.org/) library automagically building a config object used throughout an application.
 
-This library supports both callback and promises (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles.
+* This library supports both callback and promises (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles.
+* This library uses [get-env](https://github.com/pilwon/node-get-env) to parse `process.env.NODE_ENV`.
 
 
 ## Supported Formats

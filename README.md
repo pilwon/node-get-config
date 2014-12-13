@@ -26,18 +26,18 @@ For example, if you placed both `client.json` and `server.yaml` files in `config
 ```
 {
   client: <content-from-client.json>,
-  server: <content-from-server.json>
+  server: <content-from-server.yaml>
 }
 ```
 
 It also assumes you have an optional override directory (usually to override default values with environment-specific values based on `process.env.NODE_ENV`). The override directory path is a relative path to the (default) config directory. If you pass `dev` as the override directory, the library will read all the config files under `config/dev/` in the same way explained above for the (default) config directory, then the values will be merged with the default config object.
 
-For example, if you placed both `client.json` and `server.yaml` files in `config/` and `client.yaml` in `config/dev`, it would return a config object looking like this when you run your application in the `dev` environment (it would return the object same as the above example for the rest of environments):
+For example, if you placed both `client.json` and `server.yaml` files in `config/` and `client.xml` in `config/dev`, it would return a config object looking like this when you run your application in the `dev` environment (it would return the object same as the above example for the rest of environments):
 
 ```
 {
-  client: <content-from-client.json merged with content-from-config/client.yaml>,
-  server: <content-from-server.json>
+  client: <content-from-client.json merged with content-from-config/client.xml>,
+  server: <content-from-server.yaml>
 }
 ```
 

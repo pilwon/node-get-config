@@ -79,6 +79,8 @@ getConfig(configDir)
   .catch(function (err) {});
 ```
 
+See the [example structure](https://github.com/pilwon/node-get-config/tree/master/example).
+
 
 ## Credits
 

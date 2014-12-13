@@ -18,7 +18,7 @@ It assumes you have a separate directory somewhere in your project that is devot
 
 For example, if you placed both `client.json` and `server.yaml` files in `config/`, it would return a config object looking like this:
 
-```json
+```
 {
   client: <content-from-client.json>,
   server: <content-from-server.json>
@@ -29,7 +29,7 @@ It also assumes you have an optional override directory (usually to override def
 
 For example, if you placed both `client.json` and `server.yaml` files in `config/` and `client.yaml` in `config/dev`, it would return a config object looking like this when you run your application in the `dev` environment (it would return the object same as the above example for the rest of environments):
 
-```json
+```
 {
   client: <content-from-client.json merged with content-from-config/client.yaml>,
   server: <content-from-server.json>

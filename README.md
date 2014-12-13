@@ -48,6 +48,8 @@ Check out [get-env](https://github.com/pilwon/node-get-env) library for delegati
 
 ## Usage
 
+See the [example structure](https://github.com/pilwon/node-get-config/tree/master/example).
+
 ```js
 var getConfig = require('get-config');
 var configDir = __dirname + '/config';
@@ -78,8 +80,6 @@ getConfig(configDir)
   .then(function (config) {})
   .catch(function (err) {});
 ```
-
-See the [example structure](https://github.com/pilwon/node-get-config/tree/master/example).
 
 
 ## Credits

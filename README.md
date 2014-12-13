@@ -56,15 +56,13 @@ Check out [get-env](https://github.com/pilwon/node-get-env) library for delegati
 See the [example structure](https://github.com/pilwon/node-get-config/tree/master/example).
 
 ```js
-var getConfig = require('get-config');
-var configDir = __dirname + '/config';
 var env = require('get-env')();
 
 // Option 1: Callback
-getConfig(configDir, env, function (err, config) {});
+require('get-config')(__dirname + '/config', env, function (err, config) {});
 
 // Option 2: Promises (using Bluebird)
-getConfig(configDir)
+require('get-config')(__dirname + '/config', env)
   .then(function (config) {})
   .catch(function (err) {});
 ```
@@ -74,14 +72,11 @@ getConfig(configDir)
 It is recommended to stay with [get-env](https://github.com/pilwon/node-get-env) library's convention (`dev` and `prod`) to structure your config directory. If you follow the structure convention, your code can be simplified as the following:
 
 ```js
-var getConfig = require('get-config');
-var configDir = __dirname + '/config';
-
 // Option 1: Callback
-getConfig(configDir, function (err, config) {});
+require('get-config')(__dirname + '/config', function (err, config) {});
 
 // Option 2: Promises (using Bluebird)
-getConfig(configDir)
+require('get-config')(__dirname + '/config')
   .then(function (config) {})
   .catch(function (err) {});
 ```

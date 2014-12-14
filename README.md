@@ -5,7 +5,9 @@
 
 `get-config` is a [Node.js](http://nodejs.org/) library automagically building a config object used throughout an application.
 
-    var config = require('get-config').sync(__dirname + '/config');
+```js
+var config = require('get-config').sync(__dirname + '/config');
+```
 
 * Both **callback** and **promises** (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles are supported.
 * Both **asynchronous** and **synchronous** (via [deasync](https://github.com/abbr/deasync)) functions are supported.

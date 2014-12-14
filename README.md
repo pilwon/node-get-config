@@ -5,8 +5,9 @@
 
 `get-config` is a [Node.js](http://nodejs.org/) library automagically building a config object used throughout an application.
 
-* This library supports both callback and promises (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles.
-* This library uses [get-env](https://github.com/pilwon/node-get-env) to parse `process.env.NODE_ENV`.
+* Both callback and promises (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles are supported.
+* Both asynchronous and synchronous (via [deasync](https://github.com/abbr/deasync)) functions are supported.
+* [get-env](https://github.com/pilwon/node-get-env) is used to parse `process.env.NODE_ENV`.
 
 
 ## Supported Formats
@@ -56,6 +57,8 @@ Check out [get-env](https://github.com/pilwon/node-get-env) library for delegati
 
 See the [example structure](https://github.com/pilwon/node-get-config/tree/master/example).
 
+### Asynchronous (recommended)
+
 ```js
 var env = require('get-env')();
 
@@ -82,6 +85,19 @@ require('get-config')(__dirname + '/config')
   .catch(function (err) {});
 ```
 
+### Synchronous
+
+Replace `require('get-config')` with `require('get-config').sync` in the usage example above to use this library synchronously.
+
+```js
+var config = require('get-config').sync(__dirname + '/config');
+
+// OR
+
+var env = require('get-env')();
+var config = require('get-config').sync(__dirname + '/config', env);
+```
+
 
 ## Credits
 
@@ -92,6 +108,7 @@ Special thanks to:
 * [js-yaml](https://github.com/nodeca/js-yaml): YAML parser
 * [toml](https://github.com/BinaryMuse/toml-node): TOML parser
 * [xml2json](https://github.com/buglabs/node-xml2json): XML parser
+* [deasync](https://github.com/abbr/deasync): synchronous function wrapper
 
 See the [contributors](https://github.com/pilwon/node-get-config/graphs/contributors).
 

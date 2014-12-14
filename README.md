@@ -21,6 +21,8 @@
 
 ## How It Works
 
+Take a look at the [example structure](https://github.com/pilwon/node-get-config/tree/master/example).
+
 It assumes you have a separate directory somewhere in your project that is devoted to static config values that are further manipulated and used by an application. It reads all files ending with one of the supported format extensions then constructs a config object for you using filenames with their extension dropped (ex: `server.json` or `server.yaml` becomes `server`) as the key and the loaded content from the file as value during the construction of the config object. You can have one or more of these files with any choice of file format among the supported list, and you can mix them as well.
 
 For example, if you placed both `client.json` and `server.yaml` files in `config/`, it would return a config object looking like this:
@@ -54,8 +56,6 @@ Check out [get-env](https://github.com/pilwon/node-get-env) library for delegati
 
 
 ## Usage
-
-See the [example structure](https://github.com/pilwon/node-get-config/tree/master/example).
 
 ### Asynchronous (recommended)
 

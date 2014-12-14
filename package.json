@@ -35,7 +35,7 @@
   "dependencies": {
     "bluebird": "^2.3.11",
     "deasync": "0.0.7",
-    "get-env": "^0.3.2",
+    "get-env": "^0.4.0",
     "ini": "^1.3.2",
     "js-yaml": "^3.2.3",
     "lodash": "^2.4.1",

@@ -16,11 +16,11 @@ var config = require('get-config').sync(__dirname + '/config');
 
 ## Supported Formats
 
-* [INI](http://en.wikipedia.org/wiki/INI_file): `.ini`, `.cfg`, `.conf`
+* [INI](http://en.wikipedia.org/wiki/INI_file): `.ini`, `.cfg`, `.conf` → (requires `npm install ini`)
 * [JSON](http://json.org/): `.json`
-* [TOML](https://github.com/toml-lang/toml): `.toml`
-* [XML](http://www.w3.org/XML/): `.xml`
-* [YAML](http://yaml.org/): `.yaml`, `.yml`
+* [TOML](https://github.com/toml-lang/toml): `.toml` → (requires `npm install toml`)
+* [XML](http://www.w3.org/XML/): `.xml` → (requires `npm install xml2json`)
+* [YAML](http://yaml.org/): `.yaml`, `.yml` → (requires `npm install js-yaml`)
 
 
 ## How It Works
@@ -57,6 +57,14 @@ Check out [get-env](https://github.com/pilwon/node-get-env) library for delegati
 ## Installation
 
     $ npm install get-config
+
+You also need to install parser for your choice of formats:
+
+* INI: `npm install ini`
+* JSON: included
+* TOML: `npm install toml`
+* XML: `npm install xml2json`
+* YAML: `npm install js-yaml`
 
 
 ## Usage

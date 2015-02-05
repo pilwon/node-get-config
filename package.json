@@ -1,6 +1,6 @@
 {
   "name": "get-config",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Automagically builds a config object used throughout an application.",
   "license": "MIT",
   "author": {

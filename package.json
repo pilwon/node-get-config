@@ -1,6 +1,6 @@
 {
   "name": "get-config",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Automagically builds a config object used throughout an application.",
   "license": "MIT",
   "author": {
@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "bluebird": "^2.3.11",
-    "deasync": "0.0.7",
+    "deasync": "^0.0.8",
     "get-env": "^0.4.0",
     "lodash": "^2.4.1"
   },

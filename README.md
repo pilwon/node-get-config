@@ -17,6 +17,7 @@ var config = require('get-config').sync(__dirname + '/config');
 ## Supported Formats
 
 * [INI](http://en.wikipedia.org/wiki/INI_file): `.ini`, `.cfg`, `.conf` → (requires `npm install ini`)
+* [JS](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules): `.js`
 * [JSON](http://json.org/): `.json`
 * [TOML](https://github.com/toml-lang/toml): `.toml` → (requires `npm install toml`)
 * [XML](http://www.w3.org/XML/): `.xml` → (requires `npm install xml2json`)

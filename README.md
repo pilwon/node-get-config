@@ -6,11 +6,10 @@
 `get-config` is a [Node.js](http://nodejs.org/) library automagically building a config object used throughout an application.
 
 ```js
-var config = require('get-config').sync(__dirname + '/config');
+const config = await require('get-config')(`${__dirname}/config`);
 ```
 
 * Both **callback** and **promises** (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles are supported.
-* Both **asynchronous** and **synchronous** (via [deasync](https://github.com/abbr/deasync)) functions are supported.
 * [get-env](https://github.com/pilwon/node-get-env) is used to parse `process.env.NODE_ENV`.
 
 
@@ -70,18 +69,16 @@ You also need to install parser for your choice of formats:
 
 ## Usage
 
-### Asynchronous
-
 ```js
-var env = require('get-env')();
+const env = require('get-env')();
 
 // Option 1: Callback
-require('get-config')(__dirname + '/config', env, function (err, config) {});
+require('get-config')(`${__dirname}/config`, env, (err, config) => {});
 
 // Option 2: Promises (using Bluebird)
-require('get-config')(__dirname + '/config', env)
-  .then(function (config) {})
-  .catch(function (err) {});
+require('get-config')(`${__dirname}/config`, env)
+  .then((config) => {})
+  .catch((err) => {});
 ```
 
 `env` is an optional parameter. If you do not pass the `env` value, it internally calls `require('get-env')()` then uses that value for you.
@@ -90,25 +87,12 @@ It is recommended to stay with [get-env](https://github.com/pilwon/node-get-env)
 
 ```js
 // Option 1: Callback
-require('get-config')(__dirname + '/config', function (err, config) {});
+require('get-config')(`${__dirname}/config`, (err, config) => {});
 
 // Option 2: Promises (using Bluebird)
-require('get-config')(__dirname + '/config')
-  .then(function (config) {})
-  .catch(function (err) {});
-```
-
-### Synchronous
-
-Replace `require('get-config')` with `require('get-config').sync` in the usage example above to use this library synchronously.
-
-```js
-var config = require('get-config').sync(__dirname + '/config');
-
-// OR
-
-var env = require('get-env')();
-var config = require('get-config').sync(__dirname + '/config', env);
+require('get-config')(`${__dirname}/config`)
+  .then((config) => {})
+  .catch((err) => {});
 ```
 
 
@@ -121,7 +105,6 @@ Special thanks to:
 * [js-yaml](https://github.com/nodeca/js-yaml): YAML parser
 * [toml](https://github.com/BinaryMuse/toml-node): TOML parser
 * [xml2json](https://github.com/buglabs/node-xml2json): XML parser
-* [deasync](https://github.com/abbr/deasync): synchronous function wrapper
 
 See the [contributors](https://github.com/pilwon/node-get-config/graphs/contributors).
 
@@ -131,7 +114,7 @@ See the [contributors](https://github.com/pilwon/node-get-config/graphs/contribu
 <pre>
 The MIT License (MIT)
 
-Copyright (c) 2014 Pilwon Huh
+Copyright (c) 2014-2016 Pilwon Huh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

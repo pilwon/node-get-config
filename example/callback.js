@@ -1,7 +1,7 @@
-// var getConfig = require('get-config');
-var getConfig = require('../');
+// const getConfig = require('get-config');
+const getConfig = require('../');
 
-getConfig(__dirname + '/config', function (err, config) {
+getConfig(`${__dirname}/config`, (err, config) => {
   if (err) {
     return console.error(err.message);
   }
@@ -11,5 +11,6 @@ getConfig(__dirname + '/config', function (err, config) {
   //   config.server.host  ==> 'prod-server' for prod, 'localhost' otherwise
   //   config.server.port  ==> 12345 for all environments
   //   config.test.foo     ==> 'bar' only for dev
+  //   config.test.test    ==> 'test' only for dev
   console.log(config);
 });

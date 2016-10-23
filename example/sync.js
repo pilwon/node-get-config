@@ -7,9 +7,9 @@ const getConfig = require('../');
 //   config.server.port  ==> 12345 for all
 //   config.test.foo     ==> 'bar' for dev, empty otherwise
 //   config.test.test    ==> 'test' for dev, empty otherwise
-getConfig.load(`${__dirname}/config`, (err, config) => {
-  if (err) {
-    return console.error(err.message);
-  }
+try {
+  const config = getConfig.loadSync(`${__dirname}/config`);
   console.log(config);
-});
+} catch (err) {
+  console.error(err.message);
+}

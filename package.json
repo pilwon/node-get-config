@@ -1,6 +1,6 @@
 {
   "name": "get-config",
-  "version": "0.5.1",
+  "version": "0.6.8",
   "description": "Automagically builds a config object used throughout an application.",
   "license": "MIT",
   "author": {
@@ -32,18 +32,23 @@
     "prod",
     "production"
   ],
-  "main": "src",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
-    "bluebird": "^3.4.4",
-    "get-env": "0.5.1",
-    "lodash.isempty": "^4.4.0",
-    "lodash.isfunction": "^3.0.8",
-    "lodash.isstring": "^4.0.1",
-    "lodash.isundefined": "^3.0.1",
-    "lodash.merge": "^4.6.0"
+    "@types/lodash": "^4.14.37",
+    "get-env": "0.5.1"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.9.5",
+    "tslint": "^3.15.1",
+    "tslint-pilwon": "^0.1.4",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-node-externals": "^1.5.4"
   },
   "scripts": {
-    "prepublish": "npm prune"
+    "prepublish": "webpack"
   },
   "engines": {
     "node": ">=6.5.0"

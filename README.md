@@ -6,10 +6,27 @@
 `get-config` is a [Node.js](http://nodejs.org/) library automagically building a config object used throughout an application.
 
 ```js
-const config = await require('get-config')(`${__dirname}/config`);
+// Asynchronous (Async/Await)
+try {
+  const config = await require('get-config').load(`${__dirname}/config`);
+} catch (err) {...}
+
+// Asynchronous (Promise)
+require('get-config').load(`${__dirname}/config`)
+  .then(config => {...})
+  .catch(err => {...});
+
+// Asynchronous (Callback)
+require('get-config').load(`${__dirname}/config`, (err, config) => {...});
+
+// Synchronous
+try {
+  const config = require('get-config').loadSync(`${__dirname}/config`);
+} catch (err) {...}
 ```
 
-* Both **callback** and **promises** (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles are supported.
+* Both **promises** and **callback** (via [Bluebird](https://github.com/petkaantonov/bluebird)) styles are supported.
+* Synchronous version is also supported. (`.loadSync()`)
 * [get-env](https://github.com/pilwon/node-get-env) is used to parse `process.env.NODE_ENV`.
 
 
@@ -70,30 +87,31 @@ You also need to install parser for your choice of formats:
 ## Usage
 
 ```js
+const getConfig = require('get-config');
 const env = require('get-env')();
 
-// Option 1: Callback
-require('get-config')(`${__dirname}/config`, env, (err, config) => {});
+// Option 1: Async/Await
+try {
+  const config = await getConfig.load(`${__dirname}/config`, env);
+} catch (err) {...}
 
-// Option 2: Promises (using Bluebird)
-require('get-config')(`${__dirname}/config`, env)
-  .then((config) => {})
-  .catch((err) => {});
+// Option 2: Promise
+getConfig.load(`${__dirname}/config`, env)
+  .then(config => {...})
+  .catch(err => {...});
+
+// Option 3: Callback
+getConfig.load(`${__dirname}/config`, env, (err, config) => {...});
+
+// Option 4: Synchronous
+try {
+  const config = getConfig.loadSync(`${__dirname}/config`, env);
+} catch (err) {...}
 ```
 
 `env` is an optional parameter. If you do not pass the `env` value, it internally calls `require('get-env')()` then uses that value for you.
 
-It is recommended to stay with [get-env](https://github.com/pilwon/node-get-env) library's convention (`dev` and `prod`) to structure your config directory. If you follow the structure convention, your code can be simplified as the following:
-
-```js
-// Option 1: Callback
-require('get-config')(`${__dirname}/config`, (err, config) => {});
-
-// Option 2: Promises (using Bluebird)
-require('get-config')(`${__dirname}/config`)
-  .then((config) => {})
-  .catch((err) => {});
-```
+It is recommended to stay with [get-env](https://github.com/pilwon/node-get-env) library's convention (`dev` and `prod`) to structure your config directory.
 
 
 ## Credits

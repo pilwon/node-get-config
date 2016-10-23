@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": ".",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "target": "es2015"
+  }
+}

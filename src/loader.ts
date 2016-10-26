@@ -1,8 +1,8 @@
 import * as assert from 'assert';
 import * as path from 'path';
 
+import * as getEnv from 'get-env';
 import { isEmpty, isFunction, isString, isUndefined, merge } from 'lodash';
-const getEnv = require('get-env');
 
 import { exists, existsSync, isDir, isDirSync, isFile, isFileSync, readDir, readDirSync } from './fs';
 import { load as loadINI, loadSync as loadSyncINI } from './loaders/ini';
@@ -123,7 +123,7 @@ async function _load(configDir: string, envDir: string, overrideDir: string): Pr
   return merge.apply(null, results);
 }
 
-export function load(configDir: string, env?: string): Promise<any>;
+export async function load(configDir: string, env?: string): Promise<any>;
 export function load(configDir: string, callback: (err: Error, config: any) => void): void;
 export function load(configDir: string, env: string, callback: (err: Error, config: any) => void): void;
 export function load(configDir: string, env?: any, callback?: any) {

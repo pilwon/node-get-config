@@ -6,7 +6,7 @@ module.exports = {
     index: './src'
   },
   externals: [
-    webpackNodeExternals(),
+    webpackNodeExternals({modulesFromFile: true}),
     'ini',
     'js-yaml',
     'toml',

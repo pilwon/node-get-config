@@ -23,7 +23,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json', '.yaml']
+    extensions: ['.ts', '.js']
   },
   target: 'node'
 };

@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2017"],
     "declaration": true,
     "declarationDir": ".",
-    "module": "commonjs",
-    "noImplicitAny": true,
-    "target": "es2015"
+    "noImplicitAny": true
   }
 }

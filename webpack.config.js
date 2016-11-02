@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -6,7 +5,7 @@ module.exports = {
     index: './src'
   },
   externals: [
-    webpackNodeExternals({modulesFromFile: true}),
+    webpackNodeExternals(),
     'ini',
     'js-yaml',
     'toml',

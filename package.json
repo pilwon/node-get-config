@@ -1,6 +1,6 @@
 {
   "name": "get-config",
-  "version": "0.6.11",
+  "version": "0.6.12",
   "description": "Automagically builds a config object used throughout an application.",
   "license": "MIT",
   "author": {
@@ -35,16 +35,16 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "get-env": "^0.5.6",
+    "get-env": "^0.5.8",
     "lodash": "^4.16.6"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.37",
     "@types/node": "^6.0.45",
-    "ts-loader": "^1.0.0",
-    "tslint": "^4.0.0-dev.0",
+    "ts-loader": "^1.2.0",
+    "tslint": "^4.0.0-dev.1",
     "tslint-pilwon": "^0.1.6",
-    "typescript": "^2.1.0-dev.20161102",
+    "typescript": "^2.1.1",
     "webpack": "^2.1.0-beta.25",
     "webpack-node-externals": "^1.5.4"
   }

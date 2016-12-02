@@ -88,7 +88,7 @@ You also need to install parser for your choice of formats:
 
 ```js
 const getConfig = require('get-config');
-const env = require('get-env')();
+const env = getConfig.env();  // alias to "get-env"
 
 // Option 1: Async/Await
 try {
@@ -109,7 +109,7 @@ try {
 } catch (err) {...}
 ```
 
-`env` is an optional parameter. If you do not pass the `env` value, it internally calls `require('get-env')()` then uses that value for you.
+`env` is an optional parameter. If you do not pass the `env` value, it internally calls `getConfig.env()` (alias to "get-env") then uses that value for you.
 
 It is recommended to stay with [get-env](https://github.com/pilwon/node-get-env) library's convention (`dev` and `prod`) to structure your config directory.
 
